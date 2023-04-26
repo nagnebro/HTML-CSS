@@ -1,0 +1,56 @@
+
+/*동시 선택하기
+태그 클래스이름, 아이디이름
+li.클래스이름
+
+
+
+*/
+
+
+
+
+div{
+    width: 40px;
+    height : 40px;
+    background-color: pink;
+    border : 10px solid blue;
+        
+    
+    /*해상도*/
+    /*상 하 좌 우 모두 여백 5px*/
+    margin : 20px;
+    padding : 10px;
+
+}
+
+span{
+    width : 200px; /*인라인은 너비높이를 설정해도 적용이 안된다.*/
+    color : blue;
+    background-color: pink;
+    margin : 20px;
+    padding :10px;
+}
+#second ul{    
+    color : red;
+    font-size : 20px;
+    
+}
+
+#aa{
+    color : red;
+}
+
+/*
+p{border:5px solid red; background:yellow;}
+
+.box1{margin:20px;}
+.box2{margin:20px 50px;}
+.box3{margin:20px 50px 30px;}
+.box4{margin:20px 30px 50px 70px}
+*/
+p{border:5px solid red; background:yellow;}
+.box1{padding:20px;}/*상,하,좌,우*/
+.box2{padding:20px 50px;}/*상하, 좌우*/
+.box3{padding:20px 50px 30px;}/*상, 좌우, 하*/
+.box4{padding:20px 30px 50px 70px}/*상 우 하 좌*/

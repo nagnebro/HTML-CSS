@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://127.0.0.1:5500/CSS/cssEx.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Document_files/style.css">
+    <title>Document</title>
+    
+    <style>
+        /* body글꼴을 변경 */
+      
+    </style>
+</head>
+<body>
+    
+    <!-- css 셀렉터 (선택자)
+    
+    <태그 style=""> 각각 줄떄는 다음과 같이 태그를 하나만 주고
+    <head>
+        <style>
+            전체 범위에 스타일을 주려면 이렇게 태그를 씌워주면 된다.
+        </style>
+    </head>
+    <link rel = "" href = "스타일파일.css">
+    -->
+
+    
+    <h1 style="font-size: 30px;">별다방 카페</h1>
+    <h2>운영진</h2>
+    <ul>
+        <li class="male" id="ceo">X</li>
+        <li class="female">Y</li>
+    </ul>
+    <h2>매니저</h2>
+    <ul>
+        <li class="male">P</li>
+        <li class="female">Q</li>
+    </ul>
+    <h2>알바</h2>
+    <ul>
+        <li class="male">A</li>
+        <li class="female">B</li>
+        <li class="male">C</li>
+        <li class="female">D</li>
+    </ul>
+      
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

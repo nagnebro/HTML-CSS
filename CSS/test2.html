@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인 블록</title>
+    <link rel ="stylesheet" href = "style.css">
+    <style>
+    /* 아이디에 접근하기 위해서는 #, class에 접근하기 위해서는 .을 사용
+        div와 span이 같은 격이고 그 안에서 div와 span의 속성으로 주어지는 것이 class와 id라고 생각하면 된다.*/
+
+    </style>
+</head>
+    <h1> 블록 vs 인라인</h1>
+    <h2> 블록 요소</h2>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    
+
+    <ul>
+        <li>한줄에 하나씩 쌓인다.</li>
+        <li>가로,세로 (높이 너비를 설정)</li>
+        <li>화면을 배치</li>
+    </ul>
+
+        
+    <h2>인라인</h2>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+
+    <ul>
+        <li>한줄에 여러개를 표현</li>
+        <li>가로 세로(너비, 높이 설정 불가)</li>
+        <li>텍스트를 꾸밀떄 많이 사용한다.</li>
+
+    </ul>
+<body>
+
+    <p class="box1">박스의 상,하,좌,우에 20px의 여백이 지정된경우</p>
+		
+		<p class="box2">박스의 상,하에 20px의 여백이, 좌우에는 50px의 여백이 지정된경우</p>
+		
+		<p class="box3">박스의 상에 20px, 좌우에는 50px, 하에 30px의 여백이 지정된경우</p>
+		
+		
+		<p class="box4">박스의 상에 20px, 우에는 30px, 하에 50px, 좌에 70px의 여백이 지정된경우</p>
+
+        <p style="border: 3px solid blue">3픽셀 soild</p>
+        <p style="border: 3px none blue">3픽셀 none</p>
+        <p style="border: 3px hidden blue">3픽셀 hidden</p>
+        <p style="border: 3px dotted blue">3픽셀 dotted</p>
+        <p style="border: 3px dashed blue">3픽셀 dashed</p>
+        <p style="border: 3px double blue">3픽셀 double</p>
+        <p style="border: 15px groove yellow">15픽셀 groove</p>
+        <p style="border: 15px ridge yellow">15픽셀 ridge</p>
+        <p style="border: 15px inset yellow">15픽셀 inset</p>
+        <p style="border: 15px outset yellow">15픽셀 outset</p>
+    
+</body>
+</html>
+
+
+<!--
+
+            #special{ 
+            background-color: yellow;
+            color : red;
+        }
+        h1,h2,p{
+            
+            text-align: center;
+        }
+        h1,h2{
+            font-size: 30px;
+        }
+    <h1>그룹 셀렉터 설명</h1>
+    <h2>여러 선택자를 같이 사용하고 싶을 떄 사용</h2>
+    <p>스타일에 작성할 때 태그, 태그명,...</p>
+
+  
+    <p id  = "special">id 가 설정된 단락입니다</p>
+    <p id  = "special">id 가 같은 단락입니다 id는 고유한 값으로 사용돼야하나 중복해서 사용할 수도 있습니다.
+        그러나 웬만하면 id값은 각각의 개별적인 스타일을 주기위해서 별개로 사용하는 게 좋습니다.
+    </p>
+-->
