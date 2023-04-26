@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전송화면</title>
+</head>
+<body>
+    <h3>이메일 전송화면</h3>
+
+    <!--
+
+        submit 태그와 button태그의 다른 점은 submit은 form태그 내부의 데이터를 get이나 post방식으로 넘겨주는 느낌이고
+        button은 그냥 클릭으로 인해 실행할 수 있는 간단한 기능같은 것들을 넣은 느낌이다.
+
+    -->
+    <form>
+
+<!--
+        이름 : <input type = "text"><br>
+        이메일 주소 : <input type = "text" required><br>
+        내용 : <br>
+        <textarea rows ="5" cols = "50"></textarea><br>
+        <input type = "submit" value = "Send">
+        <input type = "reset" value = "Reset">
+-->
+
+        <input type = "range" min ="1" max ="10" value ="10">
+
+        <select name = "cars">
+            <option value = "bmw">BMW</option>
+            <option value = "Benz">Benz</option>
+            <option value = "현대">현대</option>
+            <option value = "도요타">도요타</option>
+            <option value = "porsche" disabled>포르쉐</option>
+        </select>
+
+        <!-- 레이블 태그를 클릭하면 텍스트 컨트롤에 초점을 맞춰서 사용이 가능하고
+            특히 모바일이나 태블릿 환경에서 강점을 발휘한다.
+        -->
+        <label for = "pet-select">Choose a pet:</label><br>
+
+        <select name = "pets" id = "pet-select" size = 10 multiple>
+
+            <option value = "dog">Dog</option>
+            <option value = "cat">Cat</option>
+            <option value = "hamster">Hamster</option>
+            <option value = "dog">Dog</option>
+            <option value = "dog">Dog</option>
+
+
+            
+
+        </select><br>
+
+
+        <label for="pet-select">Choose a pet:</label><br />
+        <select name="pets" id="pet-select">
+        <option value="">--Please choose an option--</option>
+        
+        <optgroup label="포유류"> <!-- 선택목록 그룹 -->
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+        </optgroup>
+        
+        <optgroup label="조류">
+            <option value="parrot">Parrot</option>
+        </optgroup>
+        
+        <optgroup label="물고기">
+            <option value="goldfish">Goldfish</option>
+            <option value="spider">Shark</option>
+        </optgroup>
+        </select>
+        <br>
+
+        <!-- 콤보박스 안에서 그룹을 지어서 표현-->
+        <label for = "movie"></label>
+        <input type = "text" list = "browsers">
+        <datalist id = "browsers">
+            <option value = "Internet Explorer">
+            <option value = "Chrome">
+            <option value = "FireFox">
+
+
+        </datalist>
+    </form>
+
+    <form>
+        전화번호:
+        <input type="tel" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="###-####-####"><br>
+        <input type="submit" />
+    </form>
+
+    <h3>date</h3>
+    <input type="date" >
+    <hr>
+
+    <h3>datetime</h3>
+    <input type="datetime">
+    <hr>
+
+    <h3>datetime-local</h3>
+    <input type="datetime-local" >
+    <hr>
+
+    <h3>week</h3>
+    <input type="week" >
+    <hr>
+    
+</body>
+</html>

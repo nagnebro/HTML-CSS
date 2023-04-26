@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src = "facebook.png">
+    <h2>입사지원서</h2>
+    <h3>필수정보</h3>
+    <form>
+     
+        이름 : <input type = "text" required maxlength = "3"><br>
+        생년월일 : <input type = "date"><br>
+        성별 : <select name = "gender">
+                <option value = "남">남</option>
+                <option value = "남">여</option>
+        </select>
+
+    <h3>개발자는 왜?</h3>
+    <textarea rows = "5" cols = "40"></textarea><br>
+    <h3>사용해본 것들</h3>
+
+    <input type = "checkbox" >Java <br>
+    <input type = "checkbox" >Python <br>
+    <input type = "checkbox" >HTML/CSS <br>
+    <input type = "checkbox" >JS <br>
+    <input type = "checkbox" >BootStrap <br>
+    <input type = "checkbox" >SQL <br>
+
+    <h3>희망 부서</h3>
+    <input type = "radio" name ="dep" value ="front" >프론트엔드 <br>
+    <input type = "radio" name = "dep" value ="back">백엔드 <br>
+    <input type = "radio" name = "dep" value = "db">DB <br>
+
+
+        <input type ="submit" value = "지원" onclick ="alert('지원이 완료됐습니다')">
+        <input type ="reset" value = "리셋" onclic = "alert('작성내용이 초기화됩니다.')">
+        <a href = "https://www.instagram.com" target="_blank" >인스타그램 바로가기</a>
+        <a href = "https://www.facebook.com" target="_blank">페이스북 바로가기</a>
+    </form>
+</body>
+</html>
