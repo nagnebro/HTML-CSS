@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0122)http://localhost:63342/Front-End/CSS/Day3/semantic/semantic.html?_ijt=ivibf8e6qod3s9r32tfhophs76&_ij_reload=RELOAD_ON_SAVE -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>시맨틱 태그</title>
+    <link rel="stylesheet" href="./시맨틱 태그_files/style.css">
+</head>
+<body>
+    <header>
+
+        <h1>BookStore</h1>
+
+    </header>
+    <nav>
+        <a href="http://localhost:63342/Front-End/CSS/Day3/semantic/%EB%8B%A8%ED%96%89%EB%B3%B8">단행본</a><br>
+        <a href="http://localhost:63342/Front-End/CSS/Day3/semantic/semantic.html?_ijt=ivibf8e6qod3s9r32tfhophs76&amp;_ij_reload=RELOAD_ON_SAVE">간행물</a><br>
+        <a href="http://localhost:63342/Front-End/CSS/Day3/semantic/semantic.html?_ijt=ivibf8e6qod3s9r32tfhophs76&amp;_ij_reload=RELOAD_ON_SAVE">보고서</a><br>
+        <a href="http://localhost:63342/Front-End/CSS/Day3/semantic/semantic.html?_ijt=ivibf8e6qod3s9r32tfhophs76&amp;_ij_reload=RELOAD_ON_SAVE">기타</a>
+    </nav>
+    <article>
+        도서안내<br>
+        <section>
+            베스트셀러<br>
+            <ul>
+                <li>김미경의 마흔 수업</li>
+                <li>장하준의 경제학 레시피</li>
+                <li>사피엔스</li>
+                <li>거인의 노트</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h1>추천도서</h1>
+            <ul>
+                <li>반지의 제왕 일러스트 특별판</li>
+                <li>사랑할 수 없는 두사람</li>
+                <li>더 크래시</li>
+                <li>이런 공부법은 처음이야</li>
+            </ul>
+        </section>
+
+
+    </article>
+
+    <footer>
+        네이버(주)<br>
+    </footer>
+
+
+
+
+
+
+
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>

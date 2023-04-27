@@ -1,0 +1,12 @@
+#hi{
+    color : red;
+    font-size: 20px;
+}
+div{
+
+    background-color: pink;
+}
+#a{color : green;}
+#b{color : red;}
+#c{font-size : 20px;}
+.d{background-color: yellow;}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>에밋</title>
+
+</head>
+<body>
+    <!--태그랑 css 문법을 자동 완성 시켜주는 기능이다.
+
+
+    자식 요소 > 태그안에 태그를 집어넣을 때 사용
+    div > p와 같이 작성하고   tab 키를 누르면 된다.
+     -->
+    <div>
+        <p></p>
+    </div>
+    <!-- 형제로 붙여서 쓸때는 +를 붙인다 -->
+    div>p+span
+    <div>
+        <p></p>
+        <span></span></div>
+
+    div>ul>li
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    div>ul>li*5
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    div>ul*3>li*5 다음과 같이도 사용가능
+
+    <!-- 올라가기 --> 태그 작성하다가 끝에 추가할 요소 있을 때
+
+    <div>
+        <ol>
+            <li></li>
+        </ol>
+        <p></p>
+        <a href=""></a></div>
+
+    div>ul>li^^div
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <div></div>
+
+    <div class="ex1"></div>
+    <div id="ex1"></div>
+
+
+    ul>.item*3
+
+    <ul>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+
+    ul>li.item$@3*5
+    <ul>
+        <li class="item3"></li>
+        <li class="item4"></li>
+        <li class="item5"></li>
+        <li class="item6"></li>
+        <li class="item7"></li>
+    </ul>
+
+    ul>#hash$@1*4
+    <ul>
+        <li id="hash1"></li>
+        <li id="hash2"></li>
+        <li id="hash3"></li>
+        <li id="hash4"></li>
+    </ul>
+
+    form#search
+    <form action="" id="search"></form>
+
+    <!--속성에 emmet 사용하기-->
+    p[title=hello]
+    <p title="hello"></p>
+
+    td[rowspan=2 colspan=4]
+    <td rowspan="2" colspan="4"></td>
+
+
+    <!-- 텍스트 태그명 -->
+    .fruit{apple}
+    <div class="fruit">apple</div>
+    
+    
+    ul>.hash{2}*3
+    <ul>
+        <li class="hash">2</li>
+        <li class="hash">2</li>
+        <li class="hash">2</li>
+    </ul>
+
+    <!-- 예제-->
+    div>ul>.list-item*5>a{list$}
+    <div>
+        <ul>
+            <li class="list-item"><a href="">list1</a></li>
+            <li class="list-item"><a href="">list2</a></li>
+            <li class="list-item"><a href="">list3</a></li>
+            <li class="list-item"><a href="">list4</a></li>
+            <li class="list-item"><a href="">list5</a></li>
+        </ul>
+    </div>
+
+    .table>ul>.list-item*5>a{list$}
+    <div class="table">
+        <ul>
+            <li class="list-item"><a href="">list1</a></li>
+            <li class="list-item"><a href="">list2</a></li>
+            <li class="list-item"><a href="">list3</a></li>
+            <li class="list-item"><a href="">list4</a></li>
+            <li class="list-item"><a href="">list5</a></li>
+        </ul>
+    </div>
+
+    <!--table-->
+    table>.row>.col
+    <table>
+        <tr class="row">
+            <td class="col"></td>
+        </tr>
+    </table>
+    태그에 .을 이용해서 계속 열게되면 자식태그가 계속 열리게 된다. div태그는 디펄트 값으로 설정돼있어서 태그에 별다른 설정 없이
+    #id>p 와 같이 작성하게 되면 맨 첫 태그는 id값이 id인 div태그 안에 p태그가 생기게 된다.
+    그렇다면 ul과 li, ol과 li는 부모 자식 태그이니 태그를 처음 열때 ul로 열면 이후에는 li태그 언급없이 Id나 class 설정으로 바로 열 수 있다.
+    ul>.class로 생성하면 ul태그 안에 class = "class"인 li태그가 생기게 된다.
+
+    
+    table>.row$*2>.col$
+    <table>
+        <tr class="row1">
+            <td class="col1"></td>
+        </tr>
+        <tr class="row2">
+            <td class="col2"></td>
+        </tr>
+    </table>
+
+        a:link
+        <a href="http://"></a>
+
+
+</body>
+</html>

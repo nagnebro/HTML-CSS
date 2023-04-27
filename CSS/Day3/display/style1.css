@@ -1,0 +1,18 @@
+.class{
+    width: 100px;
+    height: 80px;
+    margin: 20px;
+    background-color: #90D000;
+    display : inline-block; /* 블럭요소가 inline의 형태로 한 줄로 나타날 수 있다.
+    inline과 inline - block을 이용하면 된다.*/
+    /*display : inline;*/
+}
+
+
+
+/*span{*/
+/*    background-color: red;*/
+/*    display : block;  !* span을 div처럼 블록으로사용할 수 있게 된다.*!*/
+/*    margin: 10px;*/
+/*    width: 10px;*/
+/*}*/

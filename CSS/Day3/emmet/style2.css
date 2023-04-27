@@ -1,0 +1,41 @@
+.a{
+    font-size : 16px;
+    font-weight : bold;
+
+}
+#login{
+    font-size : 20px;
+    font-weight: bold;
+    margin-bottom: -10px;
+
+
+
+}
+.text{
+    margin-left: 20px;
+    margin-top: -10px;
+}
+.whole{
+    margin-left: 100px;
+}
+#top{
+    padding : 30px;
+    width : 300px;
+    color : white;
+    font-size : 40px;
+    text-align: center;
+    background-color: forestgreen;
+    margin-bottom: 10px;
+}
+
+#bottom{
+
+    width: 315px;
+    padding: 20px;
+    color : white;
+    margin-top: 10px;
+    font-size : 40px;
+    text-align: center;
+    background-color: forestgreen;
+
+}
