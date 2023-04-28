@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0118)http://localhost:63342/Front-End/CSS/Day4/bootstrapex01.html?_ijt=13rcdglpfi8l8mrb4n58lhhlsj&_ij_reload=RELOAD_ON_SAVE -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Title</title>
+    <link href="./Title_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <style>
+
+    .container-fluid{
+      display : flex;
+
+    }
+    .nav-item{
+      justify-content: right;
+    }
+
+  </style>
+</head>
+<body>
+<script src="./Title_files/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://localhost:63342/Front-End/CSS/Day4/bootstrapex01.html?_ijt=13rcdglpfi8l8mrb4n58lhhlsj&amp;_ij_reload=RELOAD_ON_SAVE#">Pricing example</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="http://localhost:63342/Front-End/CSS/Day4/bootstrapex01.html?_ijt=13rcdglpfi8l8mrb4n58lhhlsj&amp;_ij_reload=RELOAD_ON_SAVE#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:63342/Front-End/CSS/Day4/bootstrapex01.html?_ijt=13rcdglpfi8l8mrb4n58lhhlsj&amp;_ij_reload=RELOAD_ON_SAVE#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:63342/Front-End/CSS/Day4/bootstrapex01.html?_ijt=13rcdglpfi8l8mrb4n58lhhlsj&amp;_ij_reload=RELOAD_ON_SAVE#">Pricing</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>

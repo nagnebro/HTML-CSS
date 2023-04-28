@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        content {
+            font-size: 17px;
+            width: 630px;
+            color: dimgray;
+
+
+        }
+
+        .firstname {
+
+            width: 300px;
+            height: 100px;
+        }
+
+
+        #namebox {
+            display: flex
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header img {
+            width: 60px;
+            height: 50px;
+        }
+
+        .lastbox {
+            display: flex;
+        }
+
+        block {
+            justify-content: center;
+            margin-top: 70px;
+            display: flex;
+
+        }
+
+        sidebar {
+
+
+            width: 300px;
+
+            align-items: center;
+        }
+
+        .cart {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: dodgerblue;
+
+        }
+
+        #check {
+            font-size: 32px;
+            margin: 10px;
+            color: dimgray;
+        }
+
+        .form {
+            font-size: 21px;
+            font-weight: lighter;
+
+        }
+
+        #billing {
+            margin-bottom: 10px;
+            font-size: 25px;
+
+        }
+
+        content input {
+            width: 280px;
+            height: 28px;
+            border: 0.5px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .check {
+
+            width: 20px;
+            margin: 0px;
+            border: 5px solid black;
+            height: 20px;
+
+        }
+
+        #namebox {
+            height: 80px;
+        }
+
+        .selector {
+            width: 200px;
+            height: 32px;
+            border: 0.5px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 15px;
+            color: dimgray;
+        }
+
+        #line {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 580px;
+            border: 0.5px solid darkgray;
+        }
+
+        .check1 {
+            display: flex;
+            align-content: center;
+
+        }
+
+        .longtext {
+            width: 580px;
+        }
+
+        #email {
+            margin-left: -10px;
+            border-radius: 0px 5px 5px 0px;
+            width: 550px
+        }
+
+        #email2 {
+            text-align: center;
+            width: 30px;
+        }
+
+        #c {
+            width: 150px;
+        }
+
+
+        .pricebox {
+
+
+            margin: 4px;
+            border-radius: 5px;
+            color: dimgray;
+            height: 250px;
+
+
+        }
+
+        .pricebox1 {
+            margin-left: 5px;
+
+            align-items: center;
+
+            width: 96%;
+            height: 50px;
+
+            border: 1px solid dimgray;
+        }
+
+        #top {
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        #bottom {
+
+            height: 30px;
+            border-radius: 0px 0px 5px 5px;
+            border: 1px solid dimgray;
+        }
+
+        .brief {
+            color: darkgray;
+            margin-left: 2px;
+            font-size: 13px;
+        }
+
+        .innerprice {
+            justify-content: space-between;
+            text-align: center;
+            display: flex;
+            margin-top: 8px;
+            margin-left: 2px;
+        }
+
+        .dollor {
+            color: darkgray;
+        }
+
+        #promobox {
+            color: green;
+
+        }
+
+        .promocode {
+
+            margin: 7px;
+            height: 40px;
+            border: 1px solid darkgray;
+            border-radius: 5px 5px 5px 5px;
+
+
+        }
+
+        #promoinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+        }
+
+        #promoinput {
+            height: 26px;
+            width: 190px;
+            margin-top: 3px;
+            border-radius: 5px 0px 0px 5px;
+            border: 1px solid black;
+            border-right: 0px;
+        }
+
+        #promoredeem {
+            margin-top: 3px;
+            height: 30px;
+            border-radius: 0px 5px 5px 0px;
+            border: 1px solid black;
+            background-color: darkgrey;
+            color: white;
+        }
+
+        #promoexample {
+            margin-left: 2px;
+        }
+    </style>
+</head>
+
+
+<body>
+<header>
+
+    <img src="bootstrap.jpeg">
+    <div id="check">Checkout form</div>
+    <div class="form">
+        Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a<br>
+        validation state that can be triggered by attempting to submit the form without completing it.
+    </div>
+
+</header>
+
+<block>
+
+    <content>
+        <div id="billing">Billing address</div>
+        <div id="namebox">
+            <div class="firstname">
+
+                First name<br>
+                <input type="text">
+            </div>
+            <div class="firstname">
+                Last name
+                <input type="text">
+            </div>
+        </div>
+
+        Username<br>
+        <div>
+            <input class="longtext" type="text" placeholder="Username">
+        </div>
+
+        <div>
+            Email (Optional)<br>
+            <input type="text" id="email2" value="@">
+            <input id="email" type="text" placeholder="you@example.com">
+        </div>
+
+
+        Address<br>
+        <input class="longtext" type="text" placeholder="1234 Main St">
+        </div>
+
+        <div id="address2">
+            Address2<br>
+            <input class="longtext" type="text" placeholder="Apartment or suite">
+        </div>
+
+        <div class="lastbox">
+            <div id="a">
+                Country<br>
+                <select class="selector" name="country">asdsad
+                    <option value="Choose">Choose...</option>
+                    <option value="Choose">United States</option>
+                </select>
+            </div>
+            <div id="b">
+                State<br>
+                <select class="selector" name="country">asdsad
+                    <option value="Choose">Choose...</option>
+                    <option value="Choose">California</option>
+                </select>
+
+
+            </div>
+            <div>
+
+                Zip<br>
+                <input id="c" type="text">
+            </div>
+        </div>
+        <div id="line"></div>
+
+
+        <div class="check1">
+            <input class="check" type="checkbox"> Shipping address is the same as my billing address<br>
+        </div>
+        <div class="check1">
+            <input class="check" type="checkbox"> Save this information for next time
+
+        </div>
+    </content>
+
+    <sidebar>
+        <div class="cart">
+            <div>Your cart</div>
+            <img src="bootstrap.jpeg" width="30">
+        </div>
+        <div class="pricebox">
+
+            <div class="pricebox1" id="top">
+                <div class="innerprice">
+
+                    <div>Product name</div>
+                    <div class="dollor">$12</div>
+                </div>
+                <div class="brief"> Brief description</div>
+
+
+            </div>
+            <div class="pricebox1">
+                <div class="innerprice">
+
+                    <div>Product name</div>
+                    <div class="dollor">$12</div>
+                </div>
+                <div class="brief"> Brief description</div>
+
+
+            </div>
+            <div class="pricebox1">
+                <div class="innerprice">
+
+                    <div>Product name</div>
+                    <div class="dollor">$12</div>
+                </div>
+                <div class="brief"> Brief description</div>
+
+
+            </div>
+            <div class="pricebox1" id="promobox">
+                <div class="innerprice">
+
+                    <div>Promo code</div>
+                    <div class="promodollor">-$5</div>
+                </div>
+                <div id="promoexample"> Example code</div>
+
+
+            </div>
+
+
+            <div class="pricebox1" id="bottom">
+                <div class="innerprice">
+
+                    <div>Total(USD)</div>
+                    <div class="usd">$12</div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="promocode">
+            <div id="promoinner">
+                <input id="promoinput" placeholder="  Promo code" type="text"><input id="promoredeem" type="button"
+                                                                                     value="Redeem">
+            </div>
+        </div>
+        </cart>
+    </sidebar>
+
+
+</block>
+</body>
+</html>

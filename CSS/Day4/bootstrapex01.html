@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+
+
+        h1{
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            justify-content: center;
+            display: flex;
+        }
+
+
+        header {
+            text-align: center;
+            margin: 40px;
+            color
+        }
+
+
+        .navbar-brand{
+
+        }
+        #navimg{
+            width: 70px;
+            height: 70px;
+        }
+
+        .navbar-nav{
+            display : flex;
+            justify-content: right;
+        }
+        #navbarNavAltMarkup{
+            display : flex;
+            justify-content: right;
+        }
+
+        .bottombox{
+
+            text-align: center;
+            width: 200px;
+            height: 230px;
+            border : 1px solid lightgrey;
+            align-items: start;
+            border-radius: 0px 0px 10px 10px;
+
+
+        }
+        .box{
+            margin: 10px;
+        }
+        .topbox{
+            display: flex;
+            justify-content: center;
+
+            background-color: whitesmoke;
+            width: 200px;
+            height: 50px;
+            border: 1px solid lightgrey;
+            align-items: center;
+            border-bottom: 0px;
+            border-radius: 10px 10px 0px 0px;
+
+        }
+        .a1{
+            font-size: 30px;
+
+        }
+        .a2{
+            color:grey;
+            font-size: 24px;
+
+        }
+        .btn-primary{
+            width: 150px;
+        }
+        .bottombox div{
+            margin: 20px;
+            font-size: 12px;
+            color : dimgrey;
+        }
+        .bottombox a{
+            background-color: white;
+            color :blue;
+        }
+        .article{
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <img id = "navimg" src = "html.png">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Pricing example</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link disabled">Disabled</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <h1>Pricing</h1>
+    <div class="article">
+    Quickly build an effectiove pricing table for your potential customers with<br>
+    this Bootstrapl exmaple.It's built with default Bootstrap components and<br>
+    utilities with little customization.
+    </div>
+</header>
+
+<div class="cards">
+
+    <div class="box">
+        <div class="topbox">
+            Free
+        </div>
+        <div class = "bottombox">
+
+            <div class = "bottomtitle"><span class = "a1">$0</span><span class = "a2">/mo</span><br></div>
+            <div>
+            10 users included<br>
+            2 GB of storage<br>
+            Email support<br>
+            Help center access
+            </div>
+            <a href="#" class="btn btn-primary">Sign up for free</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="topbox">
+            Pro
+        </div>
+        <div class = "bottombox">
+
+            <div class = "bottomtitle"><span class = "a1">$15</span><span class = "a2">/mo</span><br></div>
+            <div>
+                20 users included<br>
+                10 GB of storage<br>
+                Priority email support<br>
+                Help center access
+            </div>
+            <a href="#" class="btn btn-primary">Sign up for free</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="topbox">
+            Enterprise
+        </div>
+        <div class = "bottombox">
+
+            <div class = "bottomtitle"><span class = "a1">$29</span><span class = "a2">/mo</span><br></div>
+            <div>
+                30 users included<br>
+                15 GB of storage<br>
+                Phone and email support<br>
+                Help center access
+            </div>
+            <a href="#" class="btn btn-primary">Sign up for free</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

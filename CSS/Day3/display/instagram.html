@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram</title>
+  <style>
+    container{
+
+      text-align: center;
+      display : flex;
+    }
+    header{
+      display : block;
+
+    }
+
+    #top{
+
+      border : 1px solid gray;
+      width: 400px;
+      height: 500px;
+      margin: 30px;
+
+    }
+
+    #bottom{
+
+      display : flex;
+      justify-content: center;
+      align-items : center;
+      border : 1px solid gray;
+      width: 400px;
+      height: 70px;
+      margin-left: 30px;
+      margin-top: -20px;
+
+    }
+    p{
+      font-size : 40px;
+      font-weight : bold;
+      margin-top: 50px;
+    }
+
+    .login{
+      width: 250px;
+      height: 30px;
+      font-size : 14px;
+    }
+    #button{
+
+      width: 250px;
+      height: 40px;
+      margin: 20px;
+      background-color: deepskyblue;
+      border : 0px;
+      color : white;
+      font-weight: bold;
+
+    }
+
+    span{
+
+      color : dodgerblue;
+      font-weight: bold;
+    }
+    input{
+      margin: 3px;
+      font-size : 13px;
+      background-color: aliceblue;
+      border : 1px solid gray;
+    }
+    #facebook{
+      font-weight: bold;
+      font-size : 20px;
+      margin: 30px;
+      margin-top: 40px;
+    }
+    #forgot{
+      font-weight: bold;
+    }
+    .img{
+      margin: 30px;
+      margin-right: -10px;
+    }
+    #icon{
+      position: absolute;
+      margin: 30px;
+      /*left : 50px;*/
+      /*top : 70px;*/
+    }
+
+  </style>
+</head>
+<body>
+<container>
+  <div class = "img">
+    <img src = "instagram.jpeg" width = "500px" height = "600px">
+    <img id = "icon"src = "instagram2.jpeg" width = "100px" height = "100px">
+  </div>
+  <header>
+  <div id = "top">
+    <p>instagram</p>
+    <input class = "login" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" size="30"><br>
+    <input class = "login"type="text" placeholder="비밀번호" size="30"><br>
+    <input id = "button" type="button" value = "로그인" >
+    <br>또는<br>
+    <div id="facebook">facebook으로 로그인</div>
+    <div id="forgot">비밀번호를 잊으셨나요?</div>
+
+
+  </div>
+    <div id="bottom">계정이 없으신가요 ? <span>가입하기</span></div>
+  </header>
+</container>
+
+</body>
+</html>

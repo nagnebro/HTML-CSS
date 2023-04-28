@@ -4,7 +4,6 @@ div{
     margin-bottom: 20px;
     background-color: blue;
 
-    /*원하는 영역 부모>자식 */
 
 }
 
@@ -12,7 +11,7 @@ div{
     background-color: yellow;
     width: 100vh;
     height: 100vh;
-    /*position : relative;*/
+    position : relative;
 
 }
 
@@ -23,6 +22,10 @@ div{
     border: 1px solid black;
     font-size: 20px;
     margin: 5px;
+}
+
+article{
+    position: static;
 }
 
 #a{

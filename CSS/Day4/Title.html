@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!-- saved from url=(0118)http://localhost:63342/Front-End/CSS/Day4/bootStrapEx03.html?_ijt=qtsil2t3ot3boghddrlgno1ogv&_ij_reload=RELOAD_ON_SAVE -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Title</title>
+
+    <style>
+
+        content {
+            font-size: 17px;
+            width: 630px;
+            color: dimgray;
+
+
+        }
+
+        .firstname {
+
+            width: 300px;
+            height: 100px;
+        }
+
+
+        #namebox {
+            display: flex
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header img {
+            width: 60px;
+            height: 50px;
+        }
+
+        .lastbox {
+            display: flex;
+        }
+
+        block {
+            justify-content: center;
+            margin-top: 70px;
+            display: flex;
+            border: 1px solid black;
+        }
+
+        sidebar {
+
+            border: 1px solid black;
+            width: 300px;
+
+            align-items: center;
+        }
+
+        .cart {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: dodgerblue;
+
+        }
+
+        #check {
+            font-size: 32px;
+            margin: 10px;
+            color: dimgray;
+        }
+
+        .form {
+            font-size: 21px;
+            font-weight: lighter;
+
+        }
+
+        #billing {
+            margin-bottom: 10px;
+            font-size: 25px;
+
+        }
+
+        input {
+            width: 280px;
+            height: 28px;
+            border: 0.5px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .check {
+
+            width: 20px;
+            margin: 0px;
+            border: 5px solid black;
+            height: 20px;
+
+        }
+
+        #namebox {
+            height: 80px;
+        }
+
+        .selector {
+            width: 200px;
+            height: 32px;
+            border: 0.5px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 15px;
+            color: dimgray;
+        }
+
+        #line {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 580px;
+            border: 0.5px solid darkgray;
+        }
+
+        .check1 {
+            display: flex;
+            align-content: center;
+
+        }
+
+        .longtext {
+            width: 580px;
+        }
+
+        #email {
+            margin-left: -10px;
+            border-radius: 0px 5px 5px 0px;
+            width: 550px
+        }
+
+        #email2 {
+            text-align: center;
+            width: 30px;
+        }
+
+        #c {
+            width: 150px;
+        }
+
+        .class2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricebox {
+
+            border: 1px solid black;
+            margin: 4px;
+            border-radius: 5px;
+            color: dimgray;
+            height: 250px;
+        }
+
+        .pricebox1 {
+            margin-left: 5px;
+
+            align-items: center;
+            display : flex;
+            width: 96%;
+            height: 50px;
+            justify-content: space-between;
+
+
+            border: 1px solid red;
+        }
+        .dollor{
+            align-items: start;
+        }
+        #top {
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        #bottom {
+
+            height: 30px;
+            border-radius: 0px 0px 5px 5px;
+            border: 1px solid red;
+        }
+
+        .brief{
+            color : darkgray;
+
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+<header>
+
+    <img src="./Title_files/bootstrap.jpeg">
+    <div id="check">Checkout form</div>
+    <div class="form">
+        Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a<br>
+        validation state that can be triggered by attempting to submit the form without completing it.
+    </div>
+
+</header>
+
+<block>
+
+    <content>
+        <div id="billing">Billing address</div>
+        <div id="namebox">
+            <div class="firstname">
+
+                First name<br>
+                <input type="text">
+            </div>
+            <div class="firstname">
+                Last name
+                <input type="text">
+            </div>
+        </div>
+
+        Username<br>
+        <div>
+            <input class="longtext" type="text" placeholder="Username">
+        </div>
+
+        <div>
+            Email (Optional)<br>
+            <input type="text" id="email2" value="@">
+            <input id="email" type="text" placeholder="you@example.com">
+        </div>
+
+
+        Address<br>
+        <input class="longtext" type="text" placeholder="1234 Main St">
+        
+
+        <div id="address2">
+            Address2<br>
+            <input class="longtext" type="text" placeholder="Apartment or suite">
+        </div>
+
+        <div class="lastbox">
+            <div id="a">
+                Country<br>
+                <select class="selector" name="country">asdsad
+                    <option value="Choose">Choose...</option>
+                    <option value="Choose">United States</option>
+                </select>
+            </div>
+            <div id="b">
+                State<br>
+                <select class="selector" name="country">asdsad
+                    <option value="Choose">Choose...</option>
+                    <option value="Choose">California</option>
+                </select>
+
+
+            </div>
+            <div>
+
+                Zip<br>
+                <input id="c" type="text">
+            </div>
+        </div>
+        <div id="line"></div>
+
+
+        <div class="check1">
+            <input class="check" type="checkbox"> Shipping address is the same as my billing address<br>
+        </div>
+        <div class="check1">
+            <input class="check" type="checkbox"> Save this information for next time
+
+        </div>
+    </content>
+
+    <sidebar>
+        <div class="cart">
+            <div>Your cart</div>
+            <img src="./Title_files/bootstrap.jpeg" width="30">
+        </div>
+        <div class="pricebox">
+
+            <div class="pricebox1" id="top">
+                <div>
+                    Product name
+                    <div class="brief"> Brief description</div>
+                </div>
+
+                <div class="dollor">$12</div>
+
+            </div>
+            <div class="pricebox1">
+                <div class="brief">Second product</div><br>
+                <div class="brief">Brief description</div>
+                <div class="brief">$8</div>
+            </div>
+
+
+
+
+            <div class="pricebox1">Third item<br>Brief description</div>
+            <div class="pricebox1">Promo code<br>ExAMPLECODE</div>
+            <div class="pricebox1" id="bottom">Total (USD) $20</div>
+        </div>
+
+        <div class="promocode">
+            <input type="text"><input type="button" value="Redeem">
+        </div>
+    </sidebar>
+
+
+</block>
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>
