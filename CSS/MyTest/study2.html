@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+width 와 height를 %로 줬을떄는 부모의 크기값을 기준으로 한다
+그렇다면 제일 바깥쪽의 블럭은 어떻게 되는가 아마도 body를 따라가지 않을까
+그렇다면 body의 default값은 100%인가?
+
+블럭요소와 인라인요소의 차이점. 블럭은 무조건 100%, 인라인은 콘텐츠값의 100%,
+
+margin과 padding은 인라인요소에도 줄 수 잇으나 보통은 블럭에 준다.
+인라인은 보통 텍스트를 나타내고 블럭은 박스로 나타내기 때문에 굳이 인라인에다가
+위 속성을 주지는 않는다. 따라서 잘 사용하지 않는다.
+
+box-modelindex.html
+
+margin - 여백
+border - 테두리
+padding - 내부확장
+
+margin : 0 auto; 부모가 flex가 아닌 경우에 이 태그를 쓴다.
+
+border를 기준으로 padding과 margin속성이 정해진다. border가 아무리 두꺼워도 마찬가지
+
+calc : 계산값을
+box-model;
+box-sizing
+margin-left : auto; 블럭을 오른쪽으로 정렬시키고 왼쪽을 여백으로 채운다
+margin-right auto가 원래 default값이다.
+auto로 하면 블럭이 왼쪽에 정렬이되면서 오른쪽에 여백이 채워진다.
+auto라는 것은 즉 그쪽 방향으로 margin을 꽉채운다는 것이다.
+
+
+</body>
+</html>

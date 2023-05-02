@@ -51,3 +51,16 @@ let str = prompt("네이버,다음,카카오 입력하세요");
 if(str == "네이버"){
     open("https://www.naver.com/");
 }
+
+//for each문
+//가변인자
+// for( 요소 of args)의 형태로 사용한다.
+function test(first, ...args){
+
+    for(tmp of args){
+
+        console.log(tmp);
+    }
+}
+
+test(1,2,3,4,5);

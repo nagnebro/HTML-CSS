@@ -101,3 +101,36 @@ function train(input2 = "무궁화"){
 money += train();
 
 alert(money);
+
+
+// 자바스크립 배열 자료구조 (스택, 큐)
+// 큐 push -> 제일 마지막 요소
+// shift() -> 제일 앞쪽에 있는 데이터를 꺼내면서 두번째 있는 데이터를 앞으로 밀어준다.
+
+//스택 push() -> 가장 마지막에 저장한다.
+//pop() -> 마지막 요소를 꺼내온다.
+
+let arr1 = [1,2,3,4,5];
+let arr2 = [6,7,8,9,10];
+let fruit = ["사과","바나나","애플망고"];
+
+fruit.push("딸기");
+console.log(fruit);
+fruit[fruit.length+3] = "코코넛";
+console.log(fruit)
+
+
+
+let a3 = 10;
+
+// 기존의 변수값은 변경되지 않는 식의 구조를 가진 함수이다
+// 이러한 구졸르 Call by Value라고 한다. 즉 값만 복사되는 것이다.
+// 객체의 주소값이 복사돼 반환되는 것은 Call by Reference라고 한다.
+function show(num){
+    console.log(num);
+    return num;
+}
+
+show(a3);
+console.log(show(a3));
+console.log(a3)

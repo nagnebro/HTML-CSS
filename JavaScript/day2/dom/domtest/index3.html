@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+
+<body>
+<p>첫번째 p 요소</p>
+<p>두번째 p 요소</p>
+<p id="special"></p>
+<script>
+  let eleArray = document.getElementsByTagName("p");
+  document.getElementById("special").innerText = 'eleArray[0]: ' + eleArray[0].innerText;
+  // innerText와 innerHTML의 차이점은 무엇인가
+</script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <!-- bootstrap 5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!--    <script defer src = "index.js"></script>
+        스크립트 태그를 위에 작성할 거면 defer 속성을 추가해줘야 한다.
+        head부분에 script태그를 넣어놓으면 html파일을 다 읽기 전에 js파일을
+        불러오기 떄문에 에러가 발생할 수 있다. 따라서 script 태그를 작성할 때 defer속성을 주던지
+        body태그 아래에 작성해야 한다.
+-->
+  <style>
+    body {
+      padding-top: 1rem;
+    }
+
+    article {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .container{
+
+    }
+  </style>
+
+</head>
+<body class = "continaer">
+
+<h1 id="heading">DOM 객체와 이벤트 처리</h1>
+
+<article id="practice-1">
+    <h2>주문할게요</h2>
+    <p>대학 CC커플 나컴공과 나컴순. 수업을 마치고, 중국집으로 밥을 먹으러 갔다. 주문을 위해 버튼을 누르는데..</p>
+    <div class="targets">
+        <button type="button" id="order-bell" class="btn btn-primary">주문벨을 눌러주세요</button>
+    </div>
+</article>
+</body>
+<script src = "index.js"></script>
+
+</html>
+
+<!--
+    버튼을 누르거나 선택, 클릭, 전송과 같은 유저의 입력 등을 이벤트라고 하고
+    이벤트를 처리하는 단계는 3단계로 나뉜다.
+
+    1. event : 버튼, 드롭다운, 스크롤 대상(targeting)
+              감시 대상을 지정한다.
+    2. listening 특정 이벤트를 지속적으로 감시 하다가 이벤트가 발생하면
+        이벤트를 처리하는 함수로 연결(실행).
+    3. heading : 발생한 이벤트를 수행한다.
+
+
+ -->
