@@ -8,16 +8,18 @@ const button = document.querySelector("input[type=button]")
 
 // 아직도 헷갈리는 게 html에서 onclick()메서드로 접근하는 것과 js파일에서 onclick()하는 것과
 // 어떤 유의미한 차이가 있는지
-
+// -> addEventListener를 스크롤 클릭해서 어떤 메서드가 있는지 확인하자. interface의 종류에 따라 실행되는 위치가 다르다(html, javascript)
+// element 객체는 html 태그를 가지고 있는 객체이며 property와 접근하는 방법은 비슷하다.
 
 function  check(){
     const str = input.value;
-
+    console.log(typeof(input));
+    console.log(input instanceof Element)// querySelector로 접근해서 얻은 객체의 타입이 element임.
     input.value = str.length;
 
     // return false;
 }
-alert("ss");
+
 
 
 //js에서는 dblclick

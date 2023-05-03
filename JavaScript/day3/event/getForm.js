@@ -6,8 +6,9 @@ function displaySelect() {
     // selectedIndex는 드롭다운에서 선택된 인덱스를 가져온다
     //alert();
     alert(`[${selectedText}]를 선택했습니다.`);
+    return false;
 }
-selectMenu.onchange = displaySelect();
+selectMenu.onchange = displaySelect; // 왜 function()의 형태로 접근하는 것이 아니고 함수명으로만 접근해야 제대로 실행되는 거지?
 
 //라디오 버튼이나 체크 박스는 name 을 사용해 버튼을 그룹으로 묶는다. (라디오 버튼이나 체크 박스는 하나의 그룹 안에서 항목을 선택하기 때문)
 // 라디오 버튼과 체크박스는 name 값을 사용해 접근한다.
