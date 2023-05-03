@@ -17,6 +17,7 @@ console.log(yeongchan.name1);
 console.log(yeongchan.age);
 
 
+
 let yeongchan2 = {
     name1 : "김영찬2",
     age : 30,
