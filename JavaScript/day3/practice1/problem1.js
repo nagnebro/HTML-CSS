@@ -47,7 +47,7 @@ eventListener.addEventListener('change', function (event) {
             allcheck();
             break;
         }
-    }
+    }SSSSsssSSsssㄴㄴㄴㄴㄴㄴㄴㄴㄴssssssssㄴㄴㄴㄴ
     tmp2.value = str;
     return false;
 
