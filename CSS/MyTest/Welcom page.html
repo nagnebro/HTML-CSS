@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)http://localhost:63342/Front-End/project/myproject/login.html?_ijt=16b9kvnbbn3t9u9k6op2eppks4&_ij_reload=RELOAD_ON_SAVE -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Welcom page</title>
+
+    <style>
+        .background {
+            width: 100%;
+            height: 300px;
+            background-image: url(./덕성여대_.jpg);
+            /*이미지 사이즈보다 들어가는 박스의 영역이 더 크면 반복해서 보여줌*/
+            background-repeat: no-repeat;
+            /* cover - 꽉채움, 이미지가 짤릴 수 있음 / container - 이미지를 영역에 상관없이 정사이즈로 보여줌 */
+            background-size: cover;
+            background-color: red;
+            /* x,y 포지션을 top right left bottom을 줄 수 있음 */
+            background-position: center;
+        }
+        .content{
+            display : flex;
+        }
+        .informbox{
+            width: 400px;
+            height: 300px;
+            font-size : 30px;
+            font-weight : bold;
+            margin-top: 30px;
+        }
+        .informbox input{
+            width: 90%;
+            background-color: white;
+            border : 0px;
+            border-radius : 5px;
+            background-color: darkred;
+            color : white;
+            height: 45px;
+            margin-top: 5px;
+
+        }
+        .loginbox{
+            display : flex;
+            position : relative;
+            width: 500px;
+            height: 400px;
+            left: 50px;
+            top: 50px;
+
+            font-weight : bold;
+        }
+        .loginbox input{
+            width: 300px;
+            height: 20px;
+        }
+        .leftbox{
+            margin-top: 50px;
+            text-align : right;
+            margin-right: 10px;
+        }
+        .rightbox{
+            margin-top: 10px;
+        }
+
+        button{
+            background-color : darkred;
+            border : 0px;
+            height: 50px;
+            color : white;
+            font-size : 20px;
+            width: 350px;
+            margin-left: -20px;
+
+        }
+        .hmoe{
+            background-image: url('./홈.jpg');
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="home"></div>
+    <div class="background"></div>
+    <div class="content">
+    <div class="informbox">
+        <input type="button" value="로그인"><input type="button" value="회원가입"><input type="button" value="id/pw 찾기">
+    </div>
+        <div class="loginbox">
+            <div class="leftbox"> <p>아이디 :</p>패스워드 : </div>
+            <div class="rightbox">
+                <p>회원로그인</p>
+                <p><input type="text" id="id"></p>
+                <p><input type="text" id="pw"></p>
+                <p><button>로그인</button></p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<script src="./Welcom page_files/server.js"></script>
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>
