@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <style>
+        /*
+        css grid는 2차원 레이아웃 시스템을 제공한다.
+
+        grid는 flex와 마찬가지로 컨테이너와 아이템 두가지로 나눈다.
+        컨테이너 item을 감싸는 부모요소안에 item들을 배치한다.
+
+        display : grid; 와 같이 사용한다.
+        display : inline-grid;
+        inline특성을 가지는 grid
+        그리드 라인 : 그리드를 구분하는 선
+        그리드 트랙 : 두 개의 그리드 라인 사이의 공간.
+        그리드 셀 : 그리드를 구성하는 단위(하나의 아이템)
+        그리드 영역 : 네 개의 그리드 라인으로 구성된 영역
+        그리드 갭 : 그리드 간격.
+        */
+
+        .container1 {
+            width: 300px;
+            height: 300px;
+            display: grid;
+            border: 1px solid red;
+
+        }
+
+        .container1 .box {
+
+            height: 100px;
+            border: 1px dashed yellow;
+        }
+
+        .container2{
+          width: 300px;
+          height: 300px;
+          border: 1px solid yellow;
+          display: inline-grid;
+        }
+
+        .container2 .box{
+          border : 2px dashed orange;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div class="container1">
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<div class="container2">
+
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+</div>
+
+<div class="container2">
+
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+</div>
+
+
+</body>
+</html>

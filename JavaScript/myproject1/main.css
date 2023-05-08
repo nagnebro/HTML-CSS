@@ -33,7 +33,7 @@ select{
     padding-left: 15px;
 }
 
-#searchtext:focus{
+#searchtext{
 
     outline : 0;
 

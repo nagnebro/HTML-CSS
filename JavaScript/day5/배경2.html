@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배경이미지 스크롤 특성</title>
+
+    <style>
+
+        /*
+
+        background-attachment: 배경 이미지의 스크롤 여부를 지정한다.
+        => scroll: 기본값, 배경 이미지가 요소를 따라서 같이 스크롤된다.
+        => fixed: 배경 이미지가 뷰 포트에 고정되어 요소와 같이 스크롤되지 않는다.
+        => local: 요소 내 스크롤 시 배경 이미지가 같이 스크롤된다.
+         background-size: 배경 이미지의 크기를 지정한다.
+        => auto: 기본값, 배경 이미지의 원래 크기로 표시된다.
+        => 단위: px, em, % 등을 단위로 지정하고 width height 형태로 입력한다.
+        => width만 입력하면 height는 원본과 입력한 width의 비율에 맞게 자동으로 수정된다.
+        => cover: 배경 이미지가 크기 비율을 유지하며 width와 height 중에서 더 넓은 너비에 맞춰진다.
+        => contain: 배경 이미지가 크기 비율을 유지하며 width와 height 중에서 더 좁은 너비에 맞춰진다.
+
+        */
+
+
+
+        div{
+            height: 300px; /* width 는 default값이 100%이지만 height은 0이기 때문에 height은 설정해줘야 한다.*/
+            box-sizing : border-box;
+            border : 2px solid black;
+
+
+        }
+        .box3{
+            width: 300px;
+
+            background-repeat : repeat-y;
+            background-image : url("java.png");
+            background-attachment : scroll;
+            /*position : fixed;*/
+
+
+            height: 300px;
+
+
+
+        }
+        section{
+            border : 2px solid red;
+            height: 300px;
+        }
+
+        .section3{
+            background-image : url("jumbotronBackground.jpg");
+            height: 500px;
+            background-size : cover;
+
+
+        }
+        .section1{
+            background-image: url("grid실습사이트/c.png");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="box3">3</div>
+<div class="box4">4</div>
+<div class="box5">5</div>
+
+<section class="section1">1</section>
+<section class="section2">2</section>
+<section class="section3">3</section>
+<section class="section4">4</section>
+<section class="section5">5</section>
+</body>
+</html>

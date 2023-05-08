@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배경</title>
+
+  <style>
+
+    /*
+    html의 img태그말고 CSS에서 background-image속성을 블럭에다가 줄 수 있다.
+    배경이미지 삽입시 요소의 크기가 설정되어야 이미지가 보인다.
+    2개 이상의 배경 이미지를 삽입할 경우 ","로 구분하면 된다.
+    먼저 삽입된 이미지가 위에 쌓이게 된다.
+    background-repeat : repeat-x ,  repeat-y , no-repeat (축박향에 따라 반복시킬 수도 있고 반복 시키지 않을 수도 있다)
+    background-position : 위치 설정.
+    */
+    .box1{
+      width: 100px;
+      height: 100px;
+      background-image : url('grid실습사이트/c.png');
+      background-repeat : no-repeat;
+      background-size : cover;
+      background-position : center;
+    }
+
+    .box2{
+      background-image : url("grid실습사이트/android.png");
+      width: 100px;
+      height: 200px;
+      /*background-size : cover;*/
+      background-repeat: no-repeat;
+    }
+    .box3{
+      background-image : url("java.png");
+      width: 300px;
+      height: 300px;
+      background : no-repeat url("java.png");/* 다음과 같이 background속성에 관한 모든 속성을 background속성 하나에 다같이 줄 수 있다
+      마치 border속성이 있는데 border-radius, border-color 와 같이 개별적으로 속성 줄 수 있는 것과 같다.*/
+      background-size :cover;
+
+
+    }
+    .box4{
+      width: 100%;
+      height: 300px;
+      background : no-repeat url("jumbotronBackground.jpg");
+      background-size : cover;
+
+    }
+
+  </style>
+</head>
+<body>
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="box3">3</div>
+<div class="box4">4</div>
+</body>
+</html>

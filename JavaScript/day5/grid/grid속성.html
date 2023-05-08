@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid 속성</title>
+
+
+    <style>
+
+        /*
+        grid-template-rows : 행의 크기를 정의하며 행의 이름도 정의할 수 있다.
+        grid-template-column : 열의 크기를 정의하며 열의 이름도 정의할 수 있다.
+        fr(fraction, 공간비율)이라는 단위를 쓴다.
+        repeat()함수를 사용해 반복할 수 있다.
+
+        */
+        .container1 {
+            width: 450px;
+            height: 300px;
+            display: grid;
+
+            grid-template-rows : repeat(2,1fr);
+            grid-template-columns : repeat(3,1fr);
+            border: 1px solid red;
+        }
+        /*
+        repeat(반복횟수, 너비) : 행 높이 또는 열의 크기를 지정해준다.
+        grid-template-rows : repeat(2,1fr); 은 행의 길이 및 비율을 설정한다. 즉 2행으로 만들고 비율은 1:1이라는것
+        grid-template-columns  : repeat(3,1fr); 은 열의 개수를 3열로 만들고 비율은 1로 한다는것.
+
+        */
+
+        .container2 {
+            display : grid;
+            grid-template-rows: 300px 50px 100px;
+            /* 세로의 길이를 각 300, 50 , 100px로 설정,, rows는 행이고 행의 크기는 곧 세로 길이를 뜻한다.*/
+            grid-template-columns: 100px 100px ;
+            /* 가로의 길이를 각 200, 100, 50으로 설정한다.*/
+
+        }
+
+
+
+
+        .box {
+
+            border: 1px dashed yellow;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="container1">
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+</div>
+
+<div class="container2">
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+    /*
+    px : px, 고정된 크기 -> 스크롤 사이즈에 변화받지 않음.
+    % : 비율, 부모요소의 영향을 받는다.
+    em : 자기자신의 폰트 크기의 영향을 받는다.
+    rem(root em) : 가장 조상요소(html태그)의 폰트 크기의 영향을 받는다.
+
+    font 16px -> 1em, 3em -> 48px 이 된다.
+    */
+
+    html{
+      font-size  : 15px; /* 1em = 10px이 된다.*/
+    }
+    body *{
+      border : 2px solid red;
+    }
+
+
+    .container{
+      width: 60em;
+    }
+
+    .parent{
+      font-size : 2em;
+      width: 15em;
+    }
+
+    .child{
+      font-size : 2em; /* 조상 태그인 parent태그의 폰트크기를 가져온다 즉 1em은 20px이다.*/
+      width: 15rem;
+      /*rem은 최상의 부모의 태그를 기준으로 한다 . 따라서 1rem은 10px,  width = 10px * 15로 150px이다.*/
+    }
+
+
+  </style>
+  <meta charset="UTF-8">
+  <title>단위2</title>
+</head>
+<body>
+
+<div class="container">
+  container
+  <div class="parent">
+    parent
+    <div class="child">child1</div>
+    <div class="child">child2</div>
+  </div>
+</div>
+</body>
+</html>

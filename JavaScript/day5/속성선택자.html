@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+
+    /* <속성선택자>
+    태그내에 특정 속성에 값을 가지고 있는 html 요소를 선택한다.
+    [속성이름] : []안에 지정한 속성이 설정된 요소를 선택한다.
+    */
+
+    [disabled]{
+        opacity : 0.2; /* 투명도 변화  투명도 기본값은1, 숫자를 0으로 보낼 수록 투명해진다.*/
+    }
+    input[type]{
+        background-color: pink;
+    }
+    input[type=text]{ /* 버튼 속성은 해당 스타일이 적용되지 않는다.*/
+        border : 1px solid yellow;
+
+    }
+
+    /*
+    [속성이름 ^= 속성
+    */
+
+    [class ^= "btn"]{
+        font-wei값ht : bold;
+    }
+
+    /*속성값의 이름이 끝나는 요소를 선택한다.*/
+    [class$= "success"]{
+        color: orange;
+    }[class$= "danger"]{
+        color: #00b755;
+    }
+
+</style>
+<body>
+
+<input>asddsa</input>
+<input type="text" value = "홍길동">
+<input type="button" value = "button">
+
+<input type="text" value = "1234"><input type="text" value = "disabled텍스트" disabled="disabled">
+
+<button type="button" class = "btn-success">Success</button>
+<button type="button" class = "btn-danger">Danger</button>
+<button type="button">Normal</button>
+</body>
+</html>
